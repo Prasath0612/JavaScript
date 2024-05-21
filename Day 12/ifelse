@@ -1,0 +1,21 @@
+"use strict";
+let x=["Alex","Bala","Chandru","Dhanush","Gokul","Kumar"];
+let a=["Present","On duty","Present",null,"Absent",undefined]
+for (let i = 0; i < x.length; i++) {
+    if (a[i]=="Present") 
+    {
+        console.log(`${x[i]} is present`);
+    } 
+    else if(a[i]=="Absent")
+        {
+            console.log(`${x[i]} is absent`);
+        }
+    else if(a[i]=="On duty")
+    {
+        console.log(`${x[i]} is on onduty`);
+    }
+    else
+    {
+        console.log("Falsy Value");
+    }
+}
