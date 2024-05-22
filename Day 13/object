@@ -1,0 +1,11 @@
+const bike={
+    model:"KTM",
+    color:"Orange",
+    cc:200,
+    price:250000
+};
+console.log(bike.model);
+console.log(bike.color);
+console.log(bike.cc);
+console.log(bike.price);
+
