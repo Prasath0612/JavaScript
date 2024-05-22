@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Objects</title>
+</head>
+<body>
+    <h1>OBJECTS IN JAVASCRIPT</h1>
+    <p id="obj"></p>
+    <p id="obj1"></p>
+    <script>
+        const paytm=
+        {
+            userName:"Arvind",
+            upiId:"756453@icici",
+            mobno:9648374328,
+            movNam:"Premalu",
+            movie:function(noTickets)
+            {
+               
+                this.noTickets=noTickets;
+                let tickPrice=150*noTickets;
+                return tickPrice;
+            },
+        }
+        let x=paytm.userName;
+       let y="Total ticket amount for "+paytm.movNam+" is:"+paytm.movie(3); 
+       document.getElementById("obj").innerHTML=x;
+        document.getElementById("obj1").innerHTML=y;
+        
+    </script>
+   
+</body>
