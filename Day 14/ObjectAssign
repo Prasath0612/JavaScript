@@ -1,0 +1,20 @@
+const state={};
+Object.assign(state,
+{
+    name:"Tamil Nadu",
+    language:"Tamil",
+    district:32,
+    famous:function()
+    {
+        console.log("Culture");
+        console.log("Life Style")
+    }
+});
+console.log(state.name);
+console.log(state.language);
+state.famous();
+
+
+
+
+
