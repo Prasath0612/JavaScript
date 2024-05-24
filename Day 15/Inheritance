@@ -1,0 +1,31 @@
+class aadhar
+{
+    constructor(name,no)
+    {
+        this.name=name;
+        this.no=no;
+        this.disp();
+    }
+    disp()
+    {
+        console.log("Name: "+this.name);
+        console.log("Aadhar Number: "+this.no);
+    }
+}
+class details extends aadhar
+{
+    constructor(name,no,age,mobno)
+    {
+        super(name,no);
+        this.age=age;
+        this.mobno=mobno;
+        this.show();
+    }
+    show()
+    {
+        console.log("Age: "+this.age);
+        console.log("Mobile Number: "+this.mobno);
+    }
+}
+const obj=new details("Arvind",67452983,25,896543725);
+const obj1=new details("Bala",77837456,40,98769764);
