@@ -1,0 +1,18 @@
+const s=new Set(["a","b","c"]);
+s.add("d");
+s.add("e");
+s.add(1);
+s.forEach((x)=>console.log(x));
+console.log(s);
+console.log(s.size);
+console.log(s.entries());
+console.log(s.keys());
+console.log(s.values());
+console.log(Array.from(s.entries()));
+console.log(Array.from(s.keys()));
+console.log(Array.from(s.values()));
+console.log(s.has("d"));
+console.log(s.has("w"));
+console.log(s.delete("b"));
+console.log(s.clear())
+console.log(s);
