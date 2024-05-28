@@ -1,0 +1,17 @@
+const sbi={
+    accName:"Hari",
+    accNo:7863797
+}
+
+const bob={
+    accName:"Sandy",
+    accNo:2354671
+}
+function disp(balance) {
+    //this.balance=balance;
+    console.log(`${this.accName} ${this.accNo} ${balance}`);
+}
+//binding the bob object using apply()
+disp.apply(bob,[3500]);
+//binding the sbi object using apply()
+disp.apply(sbi,[5600]);
