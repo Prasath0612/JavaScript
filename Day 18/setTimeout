@@ -1,0 +1,38 @@
+const team={
+    teamName:"India",
+    headCoach:"Rahul Dravid",
+    captain:"Rohit Sharma",
+    disp:function(){
+        console.log(`Presenting you Team India Head coach Mr.${this.headCoach} and captain Mr.${this.captain} `);
+    }
+}
+
+const bat={
+    batsman:["Rohit","Virat","SKY","Pant","Hardik"],
+    display:function(){
+        console.log("Batsmen:")
+        this.batsman.forEach((x)=>console.log(x));
+    }
+}
+
+const ball={
+    bowlers:["Bumrah","Shami","Kuldeep","Jadeja","Arshdeep"],
+    show:function(){
+        console.log("Bowlers:");
+        this.bowlers.forEach((x)=>console.log(x));
+    }
+}
+
+//using regular function
+setTimeout(function(){
+    team.disp();
+},1000);
+
+//using arrow function
+setTimeout(()=>{
+    bat.display();
+},3000);
+
+//using bind method
+d=ball.show.bind(ball);
+setTimeout(d,5000);
