@@ -1,0 +1,38 @@
+console.log("Wonderla")
+let p=new Promise((resolve, reject) => {
+    ticket="special";
+    if(ticket=="special")
+        {
+            resolve();
+        }
+    else{
+        reject();
+    }
+});
+p.then(()=>{
+    let p1=new Promise((resolve, reject) => {
+        idcard="yes";
+        if (idcard=="yes") {
+            resolve();
+        } else {
+            reject();
+        }
+    });
+    p1.then(()=>{
+        tickPrice=1500;
+        splFare=250;
+        discount=tickPrice*(25/100);
+        total=tickPrice+splFare-discount;
+        console.log(`Total ticket amountt: ${total}`);
+    }).catch(()=>{
+        tickPrice=1500;
+        splFare=250;
+        total=tickPrice+splFare;
+        console.log(`Total ticket amountt: ${total}`);
+    })
+    
+}).catch(()=>{
+    tickPrice=1500;
+    console.log(`Ticket amount:${tickPrice}`);
+});
+
