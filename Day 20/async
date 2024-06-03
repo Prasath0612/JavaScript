@@ -1,0 +1,36 @@
+var name="Sanjai";
+let p=new Promise((resolve, reject) => {
+    let passportForm="yes";
+    if (passportForm=="yes") {
+        resolve(name);
+    } else {
+        reject(name);
+    }
+})
+p.then((name)=>{
+    console.log(`${name} can now move on to next step of Passport verification`);
+    return new Promise((resolve, reject) => {
+        var aadhar="verified";
+        var documents="unverified";
+        if (aadhar=="verified" && documents=="verified") {
+            resolve(name);
+        } else {
+            reject(name);
+        }
+    }).then((name)=>{
+        console.log(`Verification process of ${name} is completed`);
+    }).catch((name)=>{
+        console.log(`Verification process of ${name} is unsuccessful`)
+    })
+}).catch((name)=>{
+    console.log(`${name} is terminated from Passport verification`);
+})
+async function validation()
+{
+    try{
+    await p;
+    }catch(e){};
+    
+}
+// setTimeout(validation,3000);
+validation();
