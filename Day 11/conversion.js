@@ -1,3 +1,4 @@
+Hello
 function bool()
 {
     console.log(Boolean(1));
